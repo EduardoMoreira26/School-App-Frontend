@@ -8,6 +8,7 @@ export const GET_STUDENTS = gql`
       endDate
       students {
         name
+        lastName
       }
     }
   }

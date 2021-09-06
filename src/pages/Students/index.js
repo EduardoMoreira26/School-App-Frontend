@@ -1,22 +1,27 @@
 import { useStudentsContext } from "../../context/StudentsContext";
+import Card  from '../../components/Card';
+import { CardArea, CardList } from './styles';
 
 const Students = () => {
 const { students } = useStudentsContext()
 
-if(students.loading) return <div className='students'>Carregando...</div>
+if(students.loading) return <Card className='students'>Carregando...</Card>
 
   return (
-    <div className='students'>
+      <CardArea>
+      <CardList>
       {students?.itens?.map((item, index) => (
         <>
-          <div key={index}>{item.name}</div>
-          <div key={index}>{item.startDate}</div>
-          <div key={index}>{item.endDate}</div>
-          <div key={index}>{item.students?.map(it => `${it.name} - `)}</div>
+          <Card
+           key={index}
+           data={item}
+          />
         </>
       ))}
-    </div>
+      </CardList>
+    </CardArea>
   )
+  
 }
 
 export default Students;
