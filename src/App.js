@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import GlobalStyle from './styles/global';
+import { client } from './config/api';
+import { ApolloProvider } from '@apollo/client';
+import Students from './pages/Students';
+import StudentsContextProvider from './context/StudentsContext';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <ApolloProvider client={client}>
+      <StudentsContextProvider>
+      <Students />
+      <GlobalStyle />
+      </StudentsContextProvider>
+    </ApolloProvider>
+  </>
   );
 }
 
