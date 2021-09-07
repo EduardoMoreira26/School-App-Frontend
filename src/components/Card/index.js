@@ -21,7 +21,8 @@ export default ({ data, onClick }) => {
    <Container>
     <ItemInfoArea>
       <ItemName>Curso: {data?.name}</ItemName>
-      <DateName>{data?.endDate}</DateName>
+      <ItemName>Professor(a): {data?.teacherName}</ItemName>
+      <DateName>{`${data?.startDate }  até  ${ data?.endDate}`} </DateName>
     </ItemInfoArea>
    </Container> 
   );
