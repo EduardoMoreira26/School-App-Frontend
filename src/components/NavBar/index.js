@@ -3,11 +3,15 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import SidebarData from './SidebarData';
-import './Navbar.css';
+import './styles.css';
 import { IconContext } from 'react-icons';
+import { Sling as Hamburger } from 'hamburger-react'
+import Header from '../Header';
+import Modal from '../Modal';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
+
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -16,7 +20,8 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar} />
+             {/* <Hamburger color="#81c043" onClick={showSidebar} /> */}
+            <Hamburger duration={0.8} size={26} color="#fff" toggled={sidebar} toggle={setSidebar} />
           </Link>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
@@ -39,6 +44,8 @@ function Navbar() {
           </ul>
         </nav>
       </IconContext.Provider>
+    
+      <Header/>
     </>
   );
 }

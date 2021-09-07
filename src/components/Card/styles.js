@@ -1,44 +1,42 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #fff;
+  background-color: #f5f5f5;
   border-radius: 5px;
-  box-shadow: 0 3px 6px rgb(0, 0, 0, 0.16);
+  box-shadow: 0 1px 6px rgb(0, 0, 0, 0.16);
   padding: 10px;
   display: flex;
+  height: 100px;
   align-items: center;
-  color: #252525;
+  color: #3a424d;
   cursor: pointer;
 `;
 
+
 export const ProductPhotoArea = styled.div`
-    width: 100px;
+  width: 100px;
 `;
 
-export const ProductInfoArea = styled.div`
+export const ItemInfoArea = styled.div`
   flex: 1;
-  margin: 0 10px;
 `;
 
 export const ProductButtonArea = styled.div`
 
 `;
 
-export const ProdcutPhoto = styled.img`
-    width: 100%;
-`;
 
-export const ProductName = styled.div`
-  font-size: 20px;
+export const ItemName = styled.div`
+  font-size: 16px;
+  margin-bottom: 30px;
   font-weight: bold;
+
 `;
 
-export const ProductPrice = styled.div`
-  font-size: 14px;
-`;
-
-export const ProductIngredients = styled.div`
-  font-size: 11px;
+export const DateName = styled.div`
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-weight: bold;
 `;
 
 export const ProductButton = styled.img`

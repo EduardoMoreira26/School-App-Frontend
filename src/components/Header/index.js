@@ -1,35 +1,59 @@
-import React, { useState } from 'react';
-import Navbar from '../NavBar';
-// import { Sling as Hamburger } from 'hamburger-react'
-import SideMenu from '../SideMenu';
+/* eslint-disable import/no-anonymous-default-export */
+import React, { useState } from "react";
+import Modal from "../Modal";
+import CardModal from "../CardModal";
 
 
-// import Modal from '../Modal'
-import { Container } from './styles';
+import { 
+  Container,
+  Logo,
+  SearchInput
+} from "./styles"
 
-const Header = () => {
 
-  // const [modalVisible, setModalVisible] = useState(false)
+export default ({ search, onSearch }) => {
+  const [inputActive, setInputActive] = useState(search === '' ? false : true);
+  const [modalStatus, setModalStatus] = useState(false);
+  const [modalData, setModalData] = useState({});
 
-  // const handleButtonClick = () => {
-  //   setModalVisible(true);
-  // }
+  const handleProductClick = (data) => {
+    setModalData(data);
+    setModalStatus(true);
+};
+  
+  const handleInputFocus = () => {
+    setInputActive(true);
+  };
+
+  const handleInputBlur = () => {
+    if(search === '') {
+      setInputActive(false);
+    }
+  };
+
+  const handleChange = (e) => {
+    onSearch(e.target.value);
+  }
 
   return (
-    <Container>
-      <header>
-        <a href="/">LOGO</a>
+   <Container>
+     <SearchInput 
+      value={search}
+      onChange={handleChange}
+      type="text" 
+      placeholder="Pesquise uma aula" 
+      active={inputActive}
+      onFocus={handleInputFocus}
+      onBlur={handleInputBlur}
+      />
 
-        <Navbar/>
-
-
-        {/* <Hamburger color="#81c043" onClick={handleButtonClick} toggled={modalVisible} toggle={setModalVisible} />
-        <Modal visible={modalVisible} setVisible={setModalVisible}>
-          <h1>Testando 123</h1>
-        </Modal> */}
-      </header>
-    </Container>
+      <Modal  
+        status={modalStatus}
+        setStatus={setModalStatus}
+      >
+        <CardModal data={modalData} setStatus={setModalStatus}/>
+      </Modal> 
+      <button onClick={handleProductClick}>Criar aula</button> 
+   </Container>
   );
 }
-
-export default Header;

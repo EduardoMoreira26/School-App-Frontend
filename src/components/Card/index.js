@@ -3,14 +3,11 @@ import React, { useState } from "react";
 
 import { 
   Container,
-  ProductPhotoArea,
-  ProdcutPhoto,
-  ProductInfoArea,
-  ProductName,
-  ProductPrice,
-  ProductIngredients,
+  ItemInfoArea,
+  ItemName,
   ProductButtonArea,
-  ProductButton
+  ProductButton,
+  DateName
 } from "./styles"
 
 
@@ -22,19 +19,10 @@ export default ({ data, onClick }) => {
 
   return (
    <Container>
-    {/* <ProductPhotoArea>
-      <ProdcutPhoto />
-    </ProductPhotoArea> */}
-
-    <ProductInfoArea>
-      <ProductName>{data?.name}</ProductName>
-      <ProductName>{data?.endDate}</ProductName>
-    </ProductInfoArea>
-
-    <ProductButtonArea>
-      <ProductButton/>
-    </ProductButtonArea>
-
+    <ItemInfoArea>
+      <ItemName>Curso: {data?.name}</ItemName>
+      <DateName>{data?.endDate}</DateName>
+    </ItemInfoArea>
    </Container> 
   );
 }
