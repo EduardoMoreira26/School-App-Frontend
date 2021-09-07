@@ -1,27 +1,23 @@
-import { useMutation, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import React, { createContext, useContext } from 'react';
-import { GET_STUDENTS } from '../graphql';
-import { CREATE_LESSON } from '../graphql';
-
+import { GET_LESSONS } from '../graphql';
 
 const Mycontext = createContext();
 
-export default function StudentsContextProvider({children}){
-  const { data, loading } = useQuery(GET_STUDENTS)
-
+export default function LessonsContextProvider({children}){
+  const { data, loading } = useQuery(GET_LESSONS)
 
   return (
     <Mycontext.Provider 
     value={{
-      students: {
+      lessons: {
       itens: data ? data.allLessons : [],
       loading,
       // createLesson,
-      // error
     }}}>{children}</Mycontext.Provider>
   )
 }
 
-export const useStudentsContext = () => {
+export const useLessonsContext = () => {
   return useContext(Mycontext);
 }

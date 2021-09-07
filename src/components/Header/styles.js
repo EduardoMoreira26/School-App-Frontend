@@ -31,7 +31,7 @@ export const Container = styled.div`
   text-align: center;
   text-decoration: none;
   transform: translate3d(0, 0, 0);
-  transition: all .3s;
+  transition: all .1s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -44,7 +44,7 @@ export const Container = styled.div`
   box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
   opacity: 1;
   transform: translateY(0);
-  transition-duration: .35s;
+  transition-duration: .2s;
 }
 
 .button-65:hover:after {
@@ -53,8 +53,8 @@ export const Container = styled.div`
 
 .button-65:active {
   box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
-  transform: translateY(2px);
-  transition-duration: .35s;
+  transform: translateY(1px);
+  transition-duration: .2s;
 }
 
 .button-65:active:after {

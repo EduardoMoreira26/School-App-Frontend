@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import { FiX } from 'react-icons/fi'
-import { useStudentsContext } from "../../context/StudentsContext";
+import { useLessonsContext } from "../../context/StudentsContext";
 import { 
   Container,
   FormArea,
@@ -9,12 +9,12 @@ import {
   FormTitle,
   ItemButton,
 } from "./styles"
-import { CREATE_LESSON, GET_STUDENTS } from '../../graphql';
+import { CREATE_LESSON, GET_LESSONS } from '../../graphql';
 import { useMutation } from "@apollo/client";
 import toast from '../utils/toast'
 
 export default ({ data, setStatus }) => {
-  const { students } = useStudentsContext;
+  const { lessons } = useLessonsContext;
 
   const [name, setName] = useState('');
   const [teacherName, setTeacherName] = useState('');
@@ -37,7 +37,6 @@ export default ({ data, setStatus }) => {
     onError
   })
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     createLesson({
@@ -48,15 +47,15 @@ export default ({ data, setStatus }) => {
         endDate
       },
       refetchQueries: [{
-        query: GET_STUDENTS,
+        query: GET_LESSONS,
       }]
     })
 
-   setName('')
-   setStartDate('')
-   setEndDate('')
-   setTeacherName('')
-   setStatus(false)
+    setName('')
+    setStartDate('')
+    setEndDate('')
+    setTeacherName('')
+    setStatus(false)
   }
 
   return (
@@ -105,7 +104,7 @@ export default ({ data, setStatus }) => {
           />
         
         <FormButtons>
-          <ItemButton small={true} onClick={handleCancelButton}>Cancelar</ItemButton>
+          <ItemButton className='cancelButton' small={true} onClick={handleCancelButton}>Cancelar</ItemButton>
           <ItemButton disabled={createLoading} type="submit" >Salvar</ItemButton>
         </FormButtons>
         </FormArea>

@@ -43,8 +43,18 @@ export const FormArea = styled.form`
 export const FormButtons = styled.div`
   margin-top: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-space-around;
   align-items: center;
+  
+  .cancelButton{
+    background: #aaa;
+    transition: all ease 0.2s;
+
+    :hover {
+      background: #918f8f;
+    }
+  }
+
 `;
 
 export const FormTitle = styled.div`
@@ -60,9 +70,10 @@ export const FormTitle = styled.div`
 `;
 
 export const ItemButton = styled.button`
-  margin-left: 10px;
+  margin-left: 7px;
   border-radius: 5px;
   cursor: pointer; 
+  width: 180px;
 `;
 
 

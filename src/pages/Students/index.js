@@ -1,16 +1,16 @@
-import { useStudentsContext } from "../../context/StudentsContext";
+import { useLessonsContext } from "../../context/StudentsContext";
 import Card  from '../../components/Card';
 import { CardArea, CardList } from './styles';
 
-const Students = () => {
-const { students } = useStudentsContext()
+const Lessons = () => {
+const { lessons } = useLessonsContext()
 
-if(students.loading) return <Card className='students'>Carregando...</Card>
+if(lessons.loading) return <Card className='students'>Carregando...</Card>
 
   return (
       <CardArea>
       <CardList>
-      {students?.itens?.map((item, index) => (
+      {lessons?.itens?.map((item, index) => (
         <>
           <Card
            key={index}
@@ -24,4 +24,4 @@ if(students.loading) return <Card className='students'>Carregando...</Card>
   
 }
 
-export default Students;
+export default Lessons;

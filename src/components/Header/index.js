@@ -1,12 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import Modal from "../Modal";
-import CardModal from "../CardModal";
+import LessonsModal from "../LessonsModal";
 
 
 import { 
   Container,
-  Logo,
   SearchInput
 } from "./styles"
 
@@ -51,9 +50,9 @@ export default ({ search, onSearch }) => {
         status={modalStatus}
         setStatus={setModalStatus}
       >
-        <CardModal data={modalData} setStatus={setModalStatus}/>
+        <LessonsModal data={modalData} setStatus={setModalStatus}/>
       </Modal> 
-      <button onClick={handleProductClick}>Criar aula</button> 
+      <button className="button-65" onClick={handleProductClick}>Criar aula</button> 
    </Container>
   );
 }
