@@ -13,12 +13,12 @@ import {
 
 export default ({ data, onClick }) => {
 
-  // const handleClick = () => {
-  //   onClick(data);
-  // }
+  const handleClick = () => {
+    onClick(data);
+  }
 
   return (
-   <Container>
+   <Container onClick={handleClick}>
     <ItemInfoArea>
       <ItemName>Curso: {data?.name}</ItemName>
       <ItemName>Professor(a): {data?.teacherName}</ItemName>
