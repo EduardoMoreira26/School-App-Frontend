@@ -1,11 +1,12 @@
 import { useLessonsContext } from "../../context/LessonsContext";
 import Card  from '../../components/Card';
 import { CardArea, CardList } from './styles';
+import Loading from "../../components/Loading";
 
 const Lessons = () => {
 const { lessons } = useLessonsContext()
 
-if(lessons.loading) return <Card className='students'>Carregando...</Card>
+if(lessons.loading) return <Loading className='students'>Carregando...</Loading>
 
   return (
       <CardArea>
