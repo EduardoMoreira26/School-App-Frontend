@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import { FiX } from 'react-icons/fi'
-import { useLessonsContext } from "../../context/StudentsContext";
+import { useLessonsContext } from "../../context/LessonsContext";
 import { 
   Container,
   FormArea,

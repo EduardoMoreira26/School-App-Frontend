@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
@@ -9,8 +9,19 @@ import { Sling as Hamburger } from 'hamburger-react'
 import Header from '../Header';
 import Modal from '../Modal';
 
+let searchTimer = null;
+
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
+  const [headerSearch, setHeaderSearch] = useState('');
+  const [activeSearch, setActiveSearch] = useState("");
+
+  useEffect(() => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+        setActiveSearch(headerSearch);
+    }, 2000);
+}, [headerSearch]);
 
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -45,7 +56,10 @@ function Navbar() {
         </nav>
       </IconContext.Provider>
     
-      <Header/>
+      <Header
+         search={headerSearch} 
+         onSearch={setHeaderSearch}
+      />
     </>
   );
 }

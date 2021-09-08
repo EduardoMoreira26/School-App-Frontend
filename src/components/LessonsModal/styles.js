@@ -41,7 +41,7 @@ export const FormArea = styled.form`
 
 
 export const FormButtons = styled.div`
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-space-around;
   align-items: center;

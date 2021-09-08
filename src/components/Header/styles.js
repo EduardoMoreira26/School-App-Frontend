@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #252525;
+   border: 1px solid #252f3e;
+  background-color: #1b2330;
   padding: 10px 40px;
   display: flex;
   justify-content: space-between;
@@ -47,27 +48,12 @@ export const Container = styled.div`
   transition-duration: .2s;
 }
 
-.button-65:hover:after {
-  opacity: .5;
-}
-
-.button-65:active {
-  box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
-  transform: translateY(1px);
-  transition-duration: .2s;
-}
-
-.button-65:active:after {
-  opacity: 1;
-}
-
 @media (min-width: 768px) {
   .button-65 {
     padding: 14px 22px;
     width: 176px;
   }
 }
-
 `;
 
 export const SearchInput = styled.input`
@@ -77,7 +63,7 @@ export const SearchInput = styled.input`
   width: ${props => props.active ? 300 : 0}px;
   height: 40px;
   background-color: #fff;
-  background-image: url('/assets/search.png');
+  background-image: url('/assets/search2.svg');
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: 10px center;
@@ -88,5 +74,10 @@ export const SearchInput = styled.input`
 
   &:focus {
     cursor: text;
+  }
+
+  ::placeholder {
+    color: #aaa;
+    font-weight: bold;
   }
 `;

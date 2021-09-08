@@ -2,8 +2,8 @@ import React from 'react';
 import GlobalStyle from './styles/global';
 import { client } from './config/api';
 import { ApolloProvider } from '@apollo/client';
-import Students from './pages/Students';
-import StudentsContextProvider from './context/StudentsContext';
+import Lessons from './pages/Lessons';
+import LessonsContextProvider from './context/LessonsContext';
 import Navbar from './components/NavBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -12,11 +12,11 @@ const App = () => {
   return (
   <><Router>
     <ApolloProvider client={client}>
-      <StudentsContextProvider>
+      <LessonsContextProvider>
       <Navbar />
-      <Students />
+      <Lessons />
       <GlobalStyle />
-      </StudentsContextProvider>
+      </LessonsContextProvider>
     </ApolloProvider>
     </Router>
   </>

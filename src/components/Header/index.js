@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import Modal from "../Modal";
 import LessonsModal from "../LessonsModal";
-
-
 import { 
   Container,
   SearchInput
