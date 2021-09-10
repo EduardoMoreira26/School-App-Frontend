@@ -45,7 +45,6 @@ export const FormArea = styled.form`
   align-items: center;
 
   label {
-    font-weight: bold;
     display: block;
     margin-bottom: 5px;
   }

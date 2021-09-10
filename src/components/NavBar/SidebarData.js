@@ -11,15 +11,15 @@ const SidebarData = [
     cName: 'nav-text'
   },
   {
-    title: 'Reports',
-    path: '/reports',
-    icon: <IoIcons.IoIosPaper />,
+    title: 'Lessons',
+    path: '/lessons',
+    icon: <FaIcons.FaCartPlus />,
     cName: 'nav-text'
   },
   {
-    title: 'Products',
-    path: '/products',
-    icon: <FaIcons.FaCartPlus />,
+    title: 'Students',
+    path: '/students',
+    icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
   {

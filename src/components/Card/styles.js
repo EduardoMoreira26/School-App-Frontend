@@ -29,14 +29,14 @@ export const ProductButtonArea = styled.div`
 export const ItemName = styled.div`
   font-size: 16px;
   margin-bottom: 10px;
-  font-weight: bold;
+  /* font-weight: bold; */
 
 `;
 
 export const DateName = styled.div`
   font-size: 16px;
   margin-bottom: 30px;
-  font-weight: bold;
+  /* font-weight: bold; */
 `;
 
 export const ProductButton = styled.img`

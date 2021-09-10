@@ -13,7 +13,7 @@ export const FormArea = styled.form`
 
 
   label {
-    font-weight: bold;
+    /* font-weight: bold; */
     display: block;
     margin-bottom: 5px;
   }
@@ -59,7 +59,7 @@ export const FormButtons = styled.div`
 
 export const FormTitle = styled.div`
   font-size: 30px;
-  font-weight: bold;
+  /* font-weight: bold; */
   display: flex;
   justify-content: space-between;
 
