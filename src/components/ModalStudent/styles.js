@@ -44,6 +44,11 @@ export const FormArea = styled.form`
   display: flex;
   align-items: center;
 
+  .button-plus {
+    border: none;
+    background: none;
+  }
+
   label {
     display: block;
     margin-bottom: 5px;

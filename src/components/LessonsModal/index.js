@@ -9,7 +9,7 @@ import {
   FormTitle,
   ItemButton,
 } from "./styles"
-import { CREATE_LESSON, GET_LESSONS } from '../../graphql';
+import { CREATE_LESSON, GET_LESSONS } from '../../graphql/Lessons/index';
 import { useMutation } from "@apollo/client";
 import toast from '../utils/toast'
 

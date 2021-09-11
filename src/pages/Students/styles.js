@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const CardArea = styled.div`
   padding: 20px 0;
   background: #fff;
-
-  
 `;
 
 export const CardList = styled.div`
@@ -16,5 +14,4 @@ export const CardList = styled.div`
   padding: 20px 20px ;
   max-width: 1190px;
   margin: 0 auto;
-
 `;

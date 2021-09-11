@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { ASSIGNT_STUDENTS_LESSON, CREATE_STUDENT, GET_LESSONS } from '../../graphql';
+import { ASSIGNT_STUDENTS_LESSON, CREATE_STUDENT, GET_LESSONS } from '../../graphql/Lessons';
 import { FiX, FiPlus } from 'react-icons/fi'
 
 import { 
@@ -62,7 +62,7 @@ const ModalProject = ({ data, setStatus }) => {
           placeholder='Nome do aluno'
           required
           />
-        <button type='submit'><FiPlus /></button>
+        <button className="button-plus" type='submit'><FiPlus /></button>
         </FormArea>
       </ClassTitle>
 
