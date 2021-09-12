@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import SidebarData from './SidebarData';
 import './styles.css';
 import { IconContext } from 'react-icons';
 import { Sling as Hamburger } from 'hamburger-react'
-import Header from '../Header';
-import Modal from '../Modal';
+import HeaderLessons from '../HeaderLessons';
+import HeaderStudents from '../HeaderStudents';
+
 
 let searchTimer = null;
 
 function Navbar() {
+  const history = useHistory()
+  const isLessonsPage = history.location.pathname.includes('lessons')
+  const isStudentsPage = history.location.pathname.includes('students')
+
+
   const [sidebar, setSidebar] = useState(false);
   const [headerSearch, setHeaderSearch] = useState('');
   const [activeSearch, setActiveSearch] = useState("");
@@ -55,11 +61,21 @@ function Navbar() {
           </ul>
         </nav>
       </IconContext.Provider>
+
+      { isLessonsPage &&
+        <HeaderLessons
+          search={headerSearch} 
+          onSearch={setHeaderSearch}
+        />
+      }
+
+      { isStudentsPage &&
+        <HeaderStudents
+          search={headerSearch} 
+          onSearch={setHeaderSearch}
+        />  
+      }
     
-      <Header
-         search={headerSearch} 
-         onSearch={setHeaderSearch}
-      />
     </>
   );
 }
