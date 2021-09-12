@@ -8,7 +8,7 @@ import Navbar from './components/NavBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Routes from './routes';
 import Students from './pages/Students';
-// import Lessons from '../pages/Lessons';
+import Home from './pages/Home';
 
 const App = () => {
 
@@ -19,7 +19,7 @@ const App = () => {
         <LessonsContextProvider>
           <Navbar />
           <Switch>
-            <Route path='/' exact />
+            <Route path='/' exact component={Home} />
             <Route path="/lessons"  component={Lessons} />
             <Route path="/students"  component={Students} />
           </Switch>

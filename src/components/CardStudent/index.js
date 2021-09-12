@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useState } from "react";
-import {FiCalendar, FiBook, FiUser} from 'react-icons/fi'
+import React  from "react";
+import {FiUser} from 'react-icons/fi'
 
 import { 
   Container,
@@ -21,7 +21,7 @@ export default ({ data, onClick }) => {
   return (
    <Container onClick={handleClick}>
     <ItemInfoArea>
-      <ItemName><FiBook/>Curso: {data?.name}</ItemName>
+      <ItemName><FiUser/>Aluno: {data?.name}</ItemName>
       {/* <ItemName><FiUser/>Professor(a): {data?.teacherName}</ItemName>
       <DateName><FiCalendar/>{`${data?.startDate }  até  ${ data?.endDate}`} </DateName> */}
     </ItemInfoArea>

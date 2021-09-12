@@ -5,9 +5,9 @@ export const Container = styled.div`
   border-radius: 5px;
   /* box-shadow: 1px 1px 6px rgb(0, 0, 0, 0.16); */
   border: 1px solid #c7e0fc;
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
-  height: 120px;
+  height: 60px;
   align-items: center;
   color: #000;
   cursor: pointer;
@@ -21,6 +21,8 @@ export const Container = styled.div`
   svg {
     font-size: 18px;
     margin-right: 10px;
+    margin-left: 10px;
+
   }
 `;
 
@@ -40,7 +42,6 @@ export const ProductButtonArea = styled.div`
 
 export const ItemName = styled.div`
   font-size: 14px;
-  margin-bottom: 10px;
   font-weight: bold;
   display: flex;
   color: #3a3a3a;
@@ -49,12 +50,11 @@ export const ItemName = styled.div`
 
 export const DateName = styled.div`
   font-size: 14px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   font-weight: bold;
   color: #3a3a3a;
   display: flex;
   align-items: center;
-  padding-top: 10px;
   border-top: 1px solid #c7e0fc;
 `;
 
