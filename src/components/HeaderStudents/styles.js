@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-   border: 1px solid #252f3e;
+  border: 1px solid #252f3e;
   background-color: #1b2330;
   padding: 10px 40px;
   display: flex;
@@ -79,5 +79,32 @@ export const SearchInput = styled.input`
   ::placeholder {
     color: #aaa;
     font-weight: bold;
+  }
+`;
+
+
+export const FormArea = styled.form`
+  .button-plus {
+    border: none;
+    background: none;
+  }
+
+  input,
+  textarea {
+    border: 1px solid #ccc;
+    width: 90% ;
+    padding: 0.8rem;
+    border-radius: 5px;
+    background: #eee;
+    transition: 0.1s;
+    margin-bottom: 1rem;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: 1px solid #2f80ed;
+    background: #fff;
+    box-shadow: 0 0 0 3px (#ccc);
   }
 `;

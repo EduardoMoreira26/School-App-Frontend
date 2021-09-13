@@ -40,47 +40,7 @@ export const ClassTitle = styled.div`
   }
 `;
 
-export const FormArea = styled.form`
-  display: flex;
-  align-items: center;
 
-  .button-plus {
-    border: none;
-    background: none;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  input,
-  textarea {
-    display: block;
-    border: 1px solid #ccc;
-    width: 90% ;
-    padding: 0.8rem;
-    border-radius: 5px;
-    background: #eee;
-    transition: 0.1s;
-    margin-bottom: 1rem;
-  }
-
-  input:focus,
-  textarea:focus {
-    outline: none;
-    border: 1px solid #2f80ed;
-    background: #fff;
-    box-shadow: 0 0 0 3px (#ccc);
-  }
-
-  svg {
-    font-size: 30px;
-    cursor: pointer;
-    margin: 0 0  15px 5px;
-    color:  #2f80ed;
-  }
-`;
 
 export const ClassStudents = styled.div`
   /* background: #e43; */

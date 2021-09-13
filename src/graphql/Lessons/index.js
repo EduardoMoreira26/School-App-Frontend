@@ -37,21 +37,6 @@ export const CREATE_LESSON = gql`
   }
 `;
 
-export const CREATE_STUDENT = gql`
-  mutation CREATE_STUDENT(
-    $name: String!
-    # $lastName: String!
-  ){
-    createStudent(createStudentInput: {
-      name: $name
-      # lastName: $studentsIds
-    }){
-      id
-      name
-      # lastName
-    }
-  }
-`;
 
 export const ASSIGNT_STUDENTS_LESSON = gql`
   mutation ASSIGNT_STUDENTS_LESSON(

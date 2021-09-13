@@ -1,11 +1,12 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import Modal from "../Modal";
-import LessonsModal from "../LessonsModal";
 import { 
   Container,
-  SearchInput
-} from "./styles"
+  SearchInput,
+} from "./styles";
+import StudentsModal from "../StudentsModal";
+
 
 export default ({ search, onSearch }) => {
   const [inputActive, setInputActive] = useState(search === '' ? false : true);
@@ -47,7 +48,7 @@ export default ({ search, onSearch }) => {
         status={modalStatus}
         setStatus={setModalStatus}
       >
-        <LessonsModal data={modalData} setStatus={setModalStatus}/>
+        <StudentsModal data={modalData} setStatus={setModalStatus}/>
       </Modal> 
       <button className="button-65" onClick={handleProductClick}>Adicionar aluno</button> 
    </Container>
