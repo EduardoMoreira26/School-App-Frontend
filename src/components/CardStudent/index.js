@@ -1,6 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React  from "react";
-import {FiUser} from 'react-icons/fi'
+import { FiUser, FiTrash } from 'react-icons/fi'
+import { REMOVE_STUDENT } from '../../graphql/Students'
+import { useMutation } from "@apollo/client";
 
 import { 
   Container,
@@ -14,6 +16,23 @@ import {
 
 export default ({ data, onClick }) => {
 
+  const [removeStudent, {loading}] = useMutation(REMOVE_STUDENT, {
+    
+  })
+
+  console.log('LOF', data)
+
+  const handleSubmit = (e) => {
+    removeStudent({
+      variables: {
+      //  id
+      },
+      // refetchQueries: [{
+      //   query: GET_LESSONS,
+      // }]
+    })
+  }
+
   const handleClick = () => {
     onClick(data);
   }
@@ -21,9 +40,8 @@ export default ({ data, onClick }) => {
   return (
    <Container onClick={handleClick}>
     <ItemInfoArea>
-      <ItemName><FiUser/>Aluno: {data?.name}</ItemName>
-      {/* <ItemName><FiUser/>Professor(a): {data?.teacherName}</ItemName>
-      <DateName><FiCalendar/>{`${data?.startDate }  até  ${ data?.endDate}`} </DateName> */}
+      
+      <ItemName><FiUser/>Aluno: {data?.name} <FiTrash onClick={handleSubmit} /></ItemName>
     </ItemInfoArea>
    </Container> 
   );

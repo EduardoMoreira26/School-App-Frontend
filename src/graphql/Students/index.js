@@ -25,3 +25,15 @@ export const CREATE_STUDENT = gql`
     }
   }
 `;
+
+export const REMOVE_STUDENT = gql`
+  mutation REMOVE_STUDENT(
+    $id: String!
+  ){
+    removeStudent({
+      id: $id 
+    }){
+      id
+    }
+  }
+`;

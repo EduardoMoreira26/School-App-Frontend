@@ -45,17 +45,7 @@ export const ItemName = styled.div`
   font-weight: bold;
   display: flex;
   color: #3a3a3a;
-
-`;
-
-export const DateName = styled.div`
-  font-size: 14px;
-  /* margin-top: 40px; */
-  font-weight: bold;
-  color: #3a3a3a;
-  display: flex;
-  align-items: center;
-  border-top: 1px solid #c7e0fc;
+  justify-content: space-between;
 `;
 
 export const ProductButton = styled.img`
