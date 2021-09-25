@@ -16,22 +16,22 @@ import {
 
 export default ({ data, onClick }) => {
 
-  const [removeStudent, {loading}] = useMutation(REMOVE_STUDENT, {
+  // const [removeStudent, {loading}] = useMutation(REMOVE_STUDENT, {
     
-  })
+  // })
 
   console.log('LOF', data)
 
-  const handleSubmit = (e) => {
-    removeStudent({
-      variables: {
-      //  id
-      },
-      // refetchQueries: [{
-      //   query: GET_LESSONS,
-      // }]
-    })
-  }
+  // const handleSubmit = (e) => {
+  //   removeStudent({
+  //     variables: {
+  //     //  id
+  //     },
+  //     // refetchQueries: [{
+  //     //   query: GET_LESSONS,
+  //     // }]
+  //   })
+  // }
 
   const handleClick = () => {
     onClick(data);
@@ -41,7 +41,7 @@ export default ({ data, onClick }) => {
    <Container onClick={handleClick}>
     <ItemInfoArea>
       
-      <ItemName><FiUser/>Aluno: {data?.name} <FiTrash onClick={handleSubmit} /></ItemName>
+      <ItemName><FiUser/>Aluno: {data?.name} <FiTrash /></ItemName>
     </ItemInfoArea>
    </Container> 
   );
